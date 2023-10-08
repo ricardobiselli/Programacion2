@@ -58,7 +58,15 @@ class estadia:
         self.hora_salida = hora_salida
         
     def mostrar(self):
+        
+        """no funciona, imprime la dirección de memoria"""
         print(f"vehiculo: {self.vehiculo}")
+        """no funciona"""
+        
+        """SI FUNCIONA"""
+        self.vehiculo.mostrar()
+        """SI FUNCIONA"""
+        
         print(f"hora de entrada: {self.hora_entrada}")
         print(f"hora de salida: {self.hora_salida}")
     def calcularTarifaTotal(self, tarifaPorHora):
