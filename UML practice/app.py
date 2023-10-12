@@ -36,7 +36,8 @@ class profesor(usuario):
     def __str__(self):
         return self._legajo.title()
     
-    def dictar_curso(curso)
+    def dictar_curso(curso)#curso:Curso
+        pass
     
     
 martin = (estudiante, "martin", "biselli", "martin@martin.com", "111111")
