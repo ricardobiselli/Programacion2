@@ -1,15 +1,6 @@
-import os
-from abc import ABC, abstractmethod
+from usuario import *
+from datospersonales import *
 
-
-"""
-
-    Al ingresar al sistema se debe mostrar un menú en bucle con las siguiente opciones:
-1. Ingresar cómo alumno
-2. Ingresar cómo profesor
-3. Ver cursos
-4. Salir
-    """
 def menu():
     print("|--------------------------------------|")
     print("|1 - Ingresar cómo alumno              |")
@@ -18,66 +9,33 @@ def menu():
     print("|4 - Salir                             |")
     print("|--------------------------------------|\n")
 
-
 print("Bienvenido!")
 respuesta = ""
 
 while respuesta != "salir":
     menu()
-    opt = input("\n Ingrese la opción de menú: ")
-    os.system("cls")
+    opt = input("Ingrese la opción de menú: ")
+
     if opt.isnumeric():
-        if int(opt) == 1:
+        opt = int(opt)
+        if opt == 1:
+            def validar_ingreso():
+                mail_ingresado = input("Ingrese el mail con el que se registró: ")
+                for alumno in alumnos:
+                    if mail_ingresado == alumno["email"]:
+                        print("YES!")
+                        break  
+                    else:
+                        print("El correo no coincide con ningún alumno registrado.")
+            validar_ingreso()
+        elif opt == 2:
             pass
-        elif int(opt) == 2:
+        elif opt == 3:
             pass
-        elif int(opt) == 3:
-            pass
-        elif int(opt) == 4:
-            pass
+        elif opt == 4:
+            print("Saliendo del programa.")
+            repuesta = "salir"
         else:
-            print("no ha ingresando una opción válida")
+            print("No ha ingresado una opción válida")
     else:
         print("Ingrese una opción numérica")
-           
-class usuario(ABC):
-    def __init__(self, nombre:str, apellido:str, email:str, contrasenia: str):
-        self._nombre = nombre
-        self._apellido = apellido
-        self._email = email
-        self._contrasenia = contrasenia
-        
-    def __str__(self):
-        return self._nombre.title()
-    
-    def validar_credenciales(email: str, contrasenia:str)-> bool:
-        pass
-    
-    
-    
-    
-class estudiante(usuario):
-    def __init__(self, legajo: int, anio_inscripcion_carrera: int):
-        self._legajo = legajo
-        self._anio_inscripcion_carrera = anio_inscripcion_carrera
-    
-    def matricular_en_curso(curso): #curso:Curso
-        pass
-        
-        
-        
-        
-        
-class profesor(usuario):
-    def __init__(self, titulo: str, anio_egreso: int):
-        pass    
-    
-    def __str__(self):
-        return self._legajo.title()
-    
-    def dictar_curso(curso):#curso:Curso
-        pass
-    
-    
-martin = (estudiante, "martin", "biselli", "martin@martin.com", "111111")
-print(martin)
