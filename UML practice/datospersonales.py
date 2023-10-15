@@ -3,9 +3,17 @@ alumnos = [
 
     {"nombre": "ricardo",
      "apellido": "biselli",
-     "email": "soyunalumno@gmail.com",
-     "contraseña": "123123", }
+     "email": "1@gmail.com",
+     "contraseña": "123123", },
+
+
+
+    {"nombre": "martin",
+     "apellido": "biselli",
+     "email": "soyunalumno2@gmail.com",
+     "contraseña": "789789", }
 ]
+
 
 
 profesores = [

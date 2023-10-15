@@ -1,5 +1,7 @@
-from usuario import *
+import os
+from estudiante import *
 from datospersonales import *
+
 
 def menu():
     print("|--------------------------------------|")
@@ -8,6 +10,7 @@ def menu():
     print("|3 - Ver cursos                        |")
     print("|4 - Salir                             |")
     print("|--------------------------------------|\n")
+
 
 print("Bienvenido!")
 respuesta = ""
@@ -19,22 +22,21 @@ while respuesta != "salir":
     if opt.isnumeric():
         opt = int(opt)
         if opt == 1:
-            def validar_ingreso():
-                mail_ingresado = input("Ingrese el mail con el que se registró: ")
-                for alumno in alumnos:
-                    if mail_ingresado == alumno["email"]:
-                        print("YES!")
-                        break  
-                    else:
-                        print("El correo no coincide con ningún alumno registrado.")
-            validar_ingreso()
+            alumno1 = estudiante("Nombre", "Apellido", "1@gmail.com", "123123")
+            resultado = alumno1.validar_credenciales(alumnos)  
+
+            if resultado:
+                print("Access granted!")
+            else:
+                print("Access denied.")
         elif opt == 2:
-            pass
+            pass            
         elif opt == 3:
-            pass
+            pass           
         elif opt == 4:
+            os.system("clear")  # cambiar a cls para windows
             print("Saliendo del programa.")
-            repuesta = "salir"
+            respuesta = "salir"
         else:
             print("No ha ingresado una opción válida")
     else:
