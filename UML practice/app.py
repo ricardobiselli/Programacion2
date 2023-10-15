@@ -22,8 +22,13 @@ while respuesta != "salir":
     if opt.isnumeric():
         opt = int(opt)
         if opt == 1:
-            alumno1 = estudiante("Nombre", "Apellido", "1@gmail.com", "123123")
-            resultado = alumno1.validar_credenciales(alumnos)  
+            #resultado = estudiante.validar_credenciales(alumnos)
+
+            
+            resultado = estudiante.validar_credenciales(alumnos, "1@gmail.com", "123123")
+
+            
+          
 
             if resultado:
                 print("Access granted!")

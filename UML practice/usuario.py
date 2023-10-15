@@ -11,6 +11,7 @@ class usuario(ABC):
     def __str__(self):
         return self._nombre.title()
 
+    @staticmethod
     def validar_credenciales(tipo_usuario, email: str, contrasenia: str) -> bool:
 
         email = input(
