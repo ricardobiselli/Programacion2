@@ -1,6 +1,6 @@
 from usuario import *
 
-class estudiante(usuario):
+class Estudiante(Usuario):
     def __init__(self, legajo: int, anio_inscripcion_carrera: int, nombre: str, apellido: str, email: str, password:str):
         super().__init__(nombre, apellido, email, password)
         self._legajo = legajo

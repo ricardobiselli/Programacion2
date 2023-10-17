@@ -1,3 +1,4 @@
+from profesor import *
 
 alumnos = [
 
@@ -17,6 +18,7 @@ alumnos = [
 
 
 profesores = [
+#Profesor()
 
     {"nombre": "mercedes",
      "apellido": "valoni",
@@ -24,5 +26,19 @@ profesores = [
      "contraseña": "456456", }
 ]
 
+cursos = [
+    {"Materia": "Ingles I",
+    "Carrera": "Tecnicatura Universitaria en Programación"},
+    {"Materia": "Ingles II",
+    "Carrera": "Tecnicatura Universitaria en Programación"},
+    {"Materia": "Laboratorio I",
+    "Carrera": "Tecnicatura Universitaria en Programación"},
+    {"Materia": "Laboratorio II",
+    "Carrera": "Tecnicatura Universitaria en Programación"},
+    {"Materia": "Programación I",
+    "Carrera": "Tecnicatura Universitaria en Programación"},
+    {"Materia": "Programación II",
+    "Carrera": "Tecnicatura Universitaria en Programación"}
+]
 
 

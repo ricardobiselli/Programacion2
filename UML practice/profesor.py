@@ -1,6 +1,6 @@
-from app import usuario
+from app import Usuario
 
-class profesor(usuario):
+class Profesor(Usuario):
     
     def __init__(self, titulo: str, anio_egreso: int):
         pass
