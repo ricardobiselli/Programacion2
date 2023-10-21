@@ -14,9 +14,9 @@ class Factura():
         self.__estado = False
     
     @property
-    def nro_factura(cls):
-        cls.__nro_fact = cls.__nro_fact + 1
-        return cls.__nro_fact
+    def nro_factura(clear):
+        clear.__nro_fact = clear.__nro_fact + 1
+        return clear.__nro_fact
 
     @property
     def consulta(self) -> Consulta:
